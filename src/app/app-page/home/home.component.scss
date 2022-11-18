@@ -10,15 +10,13 @@
     .contenedorTexto {
       margin-left: auto;
       margin-right: auto;
-      height: 220px;
+      height: 300px;
       width: 350px;
       padding: 0.2em;
       h2 {
-        margin-top: auto;
         color: $blanco;
       }
       p {
-        margin-top: auto;
         color: $morado-claro;
       }
     }
@@ -52,6 +50,9 @@
 @media only screen and (max-width: 1024px) {
   .contenedorRotable {
     padding: 150px 0 100px 0 !important;
+    .contenedorTexto {
+      height: 240px !important;
+    }
     .contenedorFoto {
       .contenedorAttribution {
         img {
@@ -86,7 +87,7 @@
       padding: 120px 0 50px 0 !important;
       flex-direction: column;
       .contenedorTexto {
-        height: 150px;
+        height: 150px !important;
       }
       .contenedorFoto {
         .contenedorAttribution {
