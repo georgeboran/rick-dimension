@@ -3,17 +3,15 @@ import { CommonModule } from '@angular/common';
 import { FullComponent } from './full/full.component';
 import { CardContainerComponent } from './card-container/card-container.component';
 import { HomeComponent } from './home/home.component';
-
-
+import { CartasComponent } from './cartas/cartas.component';
 
 @NgModule({
   declarations: [
     FullComponent,
     CardContainerComponent,
-    HomeComponent
+    HomeComponent,
+    CartasComponent,
   ],
-  imports: [
-    CommonModule
-  ]
+  imports: [CommonModule],
 })
-export class AppPageModule { }
+export class AppPageModule {}

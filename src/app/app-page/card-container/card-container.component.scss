@@ -56,8 +56,10 @@
 
   .contenedorHolder {
     width: 100vw;
-    height: 200vh;
+    height: max-content;
     background-color: $morado-claro;
+    padding-top: 15vh;
+    padding-bottom: 10vh;
   }
 }
 
