@@ -1,0 +1,31 @@
+@import "../../utilities/_variables";
+
+.total {
+  margin-top: -1px;
+
+  .bottomBar {
+    justify-content: space-between;
+    padding: 0 2em;
+    height: 80px;
+    background-color: $morado-oscuro;
+    .imageBox {
+      img {
+      }
+    }
+    .pBox {
+      color: $morado-oscuro-letra;
+      p {
+      }
+    }
+  }
+  img {
+    margin-top: -1px;
+    position: absolute;
+  }
+
+  .contenedorHolder {
+    width: 100vw;
+    height: 60vh;
+    background-color: $morado-claro;
+  }
+}

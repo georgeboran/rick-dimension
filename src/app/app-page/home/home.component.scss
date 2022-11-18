@@ -1,0 +1,128 @@
+@import "../../utilities/_variables";
+
+.contenedorHome {
+  max-width: 100vw;
+  background-color: $morado-oscuro;
+  height: max-content;
+  .contenedorRotable {
+    padding: 200px 0 200px 0;
+    height: 100%;
+    .contenedorTexto {
+      margin-left: auto;
+      margin-right: auto;
+      height: 220px;
+      width: 350px;
+      padding: 0.2em;
+      h2 {
+        margin-top: auto;
+        color: $blanco;
+      }
+      p {
+        margin-top: auto;
+        color: $morado-claro;
+      }
+    }
+    .contenedorFoto {
+      margin-right: auto;
+      margin-left: auto;
+      display: grid;
+      padding: 1.2em;
+
+      .contenedorAttribution {
+        margin-left: auto;
+        margin-right: auto;
+        padding: 0.1em;
+        a {
+          justify-content: right;
+          color: $morado-claro-letra;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+        img {
+          width: 500px;
+          height: 450px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .contenedorRotable {
+    padding: 150px 0 100px 0 !important;
+    .contenedorFoto {
+      .contenedorAttribution {
+        img {
+          width: 390px !important;
+          height: 340px !important;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .contenedorRotable {
+    .contenedorTexto {
+      width: 290px !important;
+    }
+    .contenedorFoto {
+      .contenedorAttribution {
+        img {
+          width: 350px !important;
+          height: 300px !important;
+        }
+      }
+    }
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+  .contenedorHome {
+    .contenedorRotable {
+      padding: 120px 0 50px 0 !important;
+      flex-direction: column;
+      .contenedorTexto {
+        height: 150px;
+      }
+      .contenedorFoto {
+        .contenedorAttribution {
+          img {
+            width: 450px !important;
+            height: 400px !important;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 600px) {
+  .contenedorHome {
+    .contenedorRotable {
+      .contenedorTexto {
+        h2 {
+          font-size: larger;
+        }
+        p {
+          font-size: smaller;
+        }
+      }
+      .contenedorFoto {
+        .contenedorAttribution {
+          img {
+            width: 330px !important;
+            height: 280px !important;
+          }
+          a {
+            font-size: small;
+          }
+        }
+      }
+    }
+  }
+}

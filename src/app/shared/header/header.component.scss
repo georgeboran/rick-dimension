@@ -1,0 +1,26 @@
+@import "../../utilities/_variables";
+.topBar {
+  justify-content: space-between;
+  padding: 0 2em;
+  height: 80px;
+  background-color: $morado-claro;
+  .buttonBox {
+    color: $morado-oscuro-letra;
+    gap: 1em;
+    button {
+      width: 50px;
+      height: 50px;
+    }
+    p {
+    }
+  }
+  .pBox {
+    color: $morado-oscuro-letra;
+    p {
+    }
+  }
+}
+img {
+  margin-top: -1px;
+  position: absolute;
+}
