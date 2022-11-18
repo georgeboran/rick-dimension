@@ -3,21 +3,52 @@
 .total {
   margin-top: -1px;
 
-  .bottomBar {
-    justify-content: space-between;
-    padding: 0 2em;
-    height: 80px;
-    background-color: $morado-oscuro;
-    .imageBox {
-      img {
+  .sticky {
+    position: sticky;
+    top: 0px;
+    .bottomBar {
+      justify-content: space-between;
+      height: 70px;
+      background-color: $morado-oscuro;
+      .imageBox {
+        z-index: 10;
+        width: 450px;
+        height: max-content;
+        img {
+          width: 450px;
+          padding-top: 5em;
+          margin-left: 5em;
+        }
       }
-    }
-    .pBox {
-      color: $morado-oscuro-letra;
-      p {
+      .pBox {
+        padding: 0 1em;
+        z-index: 10;
+        height: 100%;
+        color: $morado-oscuro-letra;
+        input {
+          margin-top: auto;
+          height: 40px;
+          width: 240px;
+          font-size: medium;
+          background: url(../../../assets/buscar.svg) no-repeat scroll 0.3em 0.5em;
+          background-color: $morado-claro;
+          background-size: 29px;
+          border: none;
+          border-radius: 5px;
+          box-shadow: 1px 1px 2px $morado-claro;
+          z-index: 10;
+          color: $morado-oscuro;
+          padding-left: 2.8em;
+          &:focus {
+            outline-color: $naranja;
+          }
+        }
+        p {
+        }
       }
     }
   }
+
   img {
     margin-top: -1px;
     position: absolute;
@@ -25,7 +56,78 @@
 
   .contenedorHolder {
     width: 100vw;
-    height: 60vh;
+    height: 200vh;
     background-color: $morado-claro;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .bottomBar {
+    .imageBox {
+      width: 400px !important;
+      img {
+        width: 400px !important;
+        padding-top: 4em !important;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .bottomBar {
+    .imageBox {
+      width: 350px !important;
+      img {
+        width: 350px !important;
+        padding-top: 3em !important;
+      }
+    }
+    .pBox {
+      input {
+        height: 45px !important;
+        background-position-y: 0.7em !important;
+      }
+    }
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+  .bottomBar {
+    .imageBox {
+      width: 300px !important;
+      img {
+        width: 300px !important;
+        margin-left: 2em !important;
+      }
+    }
+    .pBox {
+      input {
+        background-position-y: 0.2em !important;
+        height: 40px !important;
+      }
+    }
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 600px) {
+  .bottomBar {
+    padding-bottom: 0.8em;
+    .imageBox {
+      width: 200px !important;
+
+      img {
+        width: 180px !important;
+        margin-left: 0 !important;
+      }
+    }
+    .pBox {
+      input {
+        height: 30px !important;
+        padding-left: 2.4em !important;
+        width: 120px !important;
+      }
+    }
   }
 }
