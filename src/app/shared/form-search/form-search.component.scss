@@ -18,3 +18,20 @@ input {
     outline-color: $naranja;
   }
 }
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+  input {
+    height: 40px !important;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 600px) {
+  input {
+    height: 30px !important;
+    background-position-y: 0.2em !important;
+    padding-left: 2.4em !important;
+    width: 150px !important;
+  }
+}
