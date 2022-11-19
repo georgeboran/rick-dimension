@@ -7,7 +7,7 @@
 
     <div class="boxTexto">
       <div class="parteSuperior">
-        <h2>{{card.name | slice: 0:25}}</h2>
+        <h2>{{card.name | slice: 0:15}}</h2>
         <div class="filas flex">
           <div [ngStyle]="card.status=='Alive'?{'background-color':'green'} : {'background-color': 'red'}"></div>
           <p>{{card.status}}</p>-
@@ -27,9 +27,10 @@
       </div>
     </div>
   </div>
-  <div class="cajaBotonTop flex" (click)="scrollTop()">
-    <span>
-      <img src="../../../assets/arrow-bar-up.svg">
-    </span>
-  </div>
+
+</div>
+<div class="cajaBotonTop flex" (click)="scrollTop()">
+  <span>
+    <img src="../../../assets/arrow-bar-up.svg">
+  </span>
 </div>

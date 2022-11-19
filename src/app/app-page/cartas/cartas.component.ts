@@ -1,6 +1,4 @@
 import { Component, HostListener, Inject, OnInit } from '@angular/core';
-import { Card } from 'src/app/shared/card.interface';
-import { CardsService } from 'src/app/shared/services/cards.service';
 import { take, filter } from 'rxjs/operators';
 import
 {
@@ -9,8 +7,11 @@ import
   ParamMap,
   Router,
 } from '@angular/router';
-
 import { DOCUMENT } from '@angular/common';
+
+import { Card } from 'src/app/shared/card.interface';
+import { CardsService } from 'src/app/shared/services/cards.service';
+
 type RequestInfo = {
   next: string;
 };
@@ -46,7 +47,6 @@ export class CartasComponent implements OnInit
 
   ngOnInit (): void
   {
-    this.getCardsByQuery();
   }
 
   @HostListener( 'window:scroll', [] )
@@ -79,7 +79,7 @@ export class CartasComponent implements OnInit
 
   retornarString ( objeto: Object )
   {
-    const firstValue = Object.values( objeto )[ 0 ]; // 👉️ '1'
+    const firstValue = Object.values( objeto )[ 0 ];
     return firstValue;
   }
 
@@ -92,6 +92,7 @@ export class CartasComponent implements OnInit
       .subscribe( () =>
       {
         this.cards = [];
+        this.pageNum = 1;
         this.getCardsByQuery();
       } );
   }
@@ -101,7 +102,6 @@ export class CartasComponent implements OnInit
   {
     this.route.queryParams.pipe( take( 1 ) ).subscribe( ( params: ParamMap | any ) =>
     {
-      console.log( 'Params -> ', params );
       this.query = params[ 'q' ];
       this.getDataFromService();
     } );

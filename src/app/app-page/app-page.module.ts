@@ -5,7 +5,8 @@ import { CardContainerComponent } from './card-container/card-container.componen
 import { HomeComponent } from './home/home.component';
 import { CartasComponent } from './cartas/cartas.component';
 import { FormSearchComponent } from '../shared/form-search/form-search.component';
-@NgModule({
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+@NgModule( {
   declarations: [
     FullComponent,
     CardContainerComponent,
@@ -13,6 +14,6 @@ import { FormSearchComponent } from '../shared/form-search/form-search.component
     CartasComponent,
     FormSearchComponent,
   ],
-  imports: [CommonModule],
-})
-export class AppPageModule {}
+  imports: [ CommonModule, InfiniteScrollModule ],
+} )
+export class AppPageModule { }
