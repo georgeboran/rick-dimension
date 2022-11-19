@@ -67,6 +67,7 @@ export class CartasComponent implements OnInit
     if ( this.info.next )
     {
       this.pageNum++;
+      console.log( this.pageNum );
       this.getDataFromService();
     }
   }
@@ -87,7 +88,7 @@ export class CartasComponent implements OnInit
   private onUrlChanged (): void
   {
     this.router.events
-      .pipe( filter( ( events ) => events instanceof NavigationEnd ) )
+      .pipe( filter( ( event ) => event instanceof NavigationEnd ) )
       .subscribe( () =>
       {
         this.cards = [];
