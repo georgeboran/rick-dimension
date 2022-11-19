@@ -15,7 +15,6 @@ import { CardsService } from 'src/app/shared/services/cards.service';
 type RequestInfo = {
   next: string;
 };
-
 @Component( {
   selector: 'app-cartas',
   templateUrl: './cartas.component.html',
@@ -32,8 +31,8 @@ export class CartasComponent implements OnInit
   private pageNum = 1;
   private query: string = '';
   private hideScrollHeight = 300;
-  private showScrollHeight = 2000;
-  showGoUpButton: boolean = true;
+  private showScrollHeight = 500;
+  showGoUpButton: boolean = false;
 
   constructor (
     @Inject( DOCUMENT ) private document: Document,

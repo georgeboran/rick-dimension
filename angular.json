@@ -107,5 +107,7 @@
       }
     }
   },
-  "defaultProject": "rick-dimension"
+  "cli": {
+    "analytics": false
+  }
 }
