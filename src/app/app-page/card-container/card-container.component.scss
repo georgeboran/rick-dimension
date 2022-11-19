@@ -2,7 +2,6 @@
 
 .total {
   margin-top: -1px;
-
   .sticky {
     position: sticky;
     top: 0px;
@@ -15,6 +14,7 @@
         width: 450px;
         height: max-content;
         img {
+          filter: drop-shadow(10px 10px 0px $blanco);
           width: 450px;
           padding-top: 5em;
           margin-left: 5em;
@@ -24,27 +24,8 @@
         padding: 0 1em;
         z-index: 10;
         height: 100%;
+        margin-top: auto;
         color: $morado-oscuro-letra;
-        input {
-          margin-top: auto;
-          height: 40px;
-          width: 240px;
-          font-size: medium;
-          background: url(../../../assets/buscar.svg) no-repeat scroll 0.3em 0.5em;
-          background-color: $morado-claro;
-          background-size: 29px;
-          border: none;
-          border-radius: 5px;
-          box-shadow: 1px 1px 2px $morado-claro;
-          z-index: 10;
-          color: $morado-oscuro;
-          padding-left: 2.8em;
-          &:focus {
-            outline-color: $naranja;
-          }
-        }
-        p {
-        }
       }
     }
   }
@@ -84,12 +65,6 @@
         padding-top: 3em !important;
       }
     }
-    .pBox {
-      input {
-        height: 45px !important;
-        background-position-y: 0.7em !important;
-      }
-    }
   }
 }
 
@@ -105,7 +80,6 @@
     }
     .pBox {
       input {
-        background-position-y: 0.2em !important;
         height: 40px !important;
       }
     }
@@ -115,11 +89,12 @@
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 600px) {
   .bottomBar {
-    padding-bottom: 0.8em;
+    padding-bottom: 0.8em !important;
     .imageBox {
       width: 200px !important;
 
       img {
+        filter: drop-shadow(5px 6px 0px $blanco) !important;
         width: 180px !important;
         margin-left: 0 !important;
       }
@@ -127,8 +102,9 @@
     .pBox {
       input {
         height: 30px !important;
+        background-position-y: 0.2em !important;
         padding-left: 2.4em !important;
-        width: 120px !important;
+        width: 150px !important;
       }
     }
   }

@@ -1,11 +1,12 @@
 @import "../../utilities/_variables";
 .topBar {
   justify-content: space-between;
-  padding: 0 2em;
+  padding: 0 3em;
   height: 80px;
   background-color: $morado-claro;
 
   .pBox {
+    margin-top: 1em;
     color: $morado-oscuro-letra;
     p {
     }

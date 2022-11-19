@@ -1,0 +1,20 @@
+@import "../../utilities/_variables";
+input {
+  margin-top: 2em;
+  height: 40px;
+  width: 240px;
+  font-size: medium;
+  background: url(../../../assets/bullseye-arrow.svg) no-repeat scroll 0.3em 0.3em;
+  background-color: $morado-claro;
+  background-size: 29px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px $morado-claro;
+  z-index: 10;
+  color: $morado-oscuro;
+  padding-left: 2.8em;
+  font-weight: 500;
+  &:focus {
+    outline-color: $naranja;
+  }
+}
