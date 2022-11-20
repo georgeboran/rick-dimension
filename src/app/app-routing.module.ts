@@ -1,26 +1,26 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CartasComponent } from './app-page/cartas/cartas.component';
-import { FullComponent } from './app-page/full/full.component';
+import { CardContainerComponent } from './full-card/card-container/card-container.component';
+import { CardDetailsComponent } from './full-card/card-details/card-details.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: FullComponent,
+    component: CardContainerComponent,
+    pathMatch: 'full',
+  }, {
+    path: 'cartas',
+    component: CardContainerComponent,
     pathMatch: 'full',
   },
   {
-    path: 'full',
-    component: FullComponent,
-  },
-  {
-    path: 'cartas',
-    component: CartasComponent,
-  },
+    path: 'details',
+    component: CardDetailsComponent
+  }
 ];
 
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
-})
-export class AppRoutingModule {}
+@NgModule( {
+  imports: [ RouterModule.forRoot( routes ) ],
+  exports: [ RouterModule ],
+} )
+export class AppRoutingModule { }

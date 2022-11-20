@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-};
+  apiUrl: "https://rickandmortyapi.com/api/character"
+}
 
 /*
  * For easier debugging in development mode, you can import the following file

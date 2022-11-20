@@ -2,12 +2,14 @@
 
 .contenedorHome {
   max-width: 100vw;
+  width: 100%;
+  height: 100%;
   background-color: $morado-oscuro;
   height: max-content;
-  .contenedorRotable {
-    padding: 200px 0 200px 0;
-    height: 100%;
 
+  .contenedorRotable {
+    row-gap: 3em;
+    height: calc(100vh - 80px);
     .contenedorTexto {
       margin-left: auto;
       margin-right: auto;
@@ -31,6 +33,8 @@
         margin-right: auto;
         padding: 0.1em;
         a {
+          position: relative;
+          z-index: 10;
           justify-content: right;
           color: $morado-claro-letra;
           text-decoration: none;
@@ -39,7 +43,7 @@
           }
         }
         img {
-          filter: drop-shadow(20px 20px 0px $morado-claro) drop-shadow(-25px -25px 0px $negro-titulo);
+          filter: drop-shadow(10px 10px 10px $morado-claro) drop-shadow(-25px -25px 0px $negro-titulo);
           width: 500px;
           height: 450px;
         }
@@ -50,7 +54,6 @@
 
 @media only screen and (max-width: 1024px) {
   .contenedorRotable {
-    padding: 150px 0 100px 0 !important;
     .contenedorTexto {
       height: 240px !important;
     }
@@ -85,7 +88,7 @@
 @media only screen and (max-width: 768px) {
   .contenedorHome {
     .contenedorRotable {
-      padding: 120px 0 50px 0 !important;
+      height: 100vh;
       flex-direction: column;
       .contenedorTexto {
         height: 150px !important;
@@ -106,8 +109,6 @@
 @media only screen and (max-width: 600px) {
   .contenedorHome {
     .contenedorRotable {
-      padding: 80px 0 50px 0 !important;
-
       .contenedorTexto {
         padding-left: 1em !important;
         h2 {

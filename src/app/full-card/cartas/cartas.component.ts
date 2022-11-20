@@ -46,35 +46,8 @@ export class CartasComponent implements OnInit
 
   ngOnInit (): void
   {
-  }
 
-  @HostListener( 'window:scroll', [] )
-  onWindowScroll (): void
-  {
-    const yOffSet = window.pageYOffset;
-    if ( ( yOffSet || this.document.documentElement.scrollTop || this.document.body.scrollTop ) > this.showScrollHeight )
-    {
-      this.showGoUpButton = true;
-    } else if ( this.showGoUpButton && ( yOffSet || this.document.documentElement.scrollTop || this.document.body.scrollTop ) > this.hideScrollHeight )
-    {
-      this.showGoUpButton = false;
-    };
-  }
-
-  onScrollDown (): void
-  {
-    console.log( 'Params -> ', this.pageNum );
-    if ( this.info.next )
-    {
-      this.pageNum++;
-      console.log( this.pageNum );
-      this.getDataFromService();
-    }
-  }
-
-  scrollTop ()
-  {
-    window.scrollTo( 0, 1000 );
+    this.getCardsByQuery();
   }
 
   retornarString ( objeto: Object )
@@ -83,7 +56,33 @@ export class CartasComponent implements OnInit
     return firstValue;
   }
 
+  @HostListener( 'window:scroll', [] )
+  onWindowScroll ( event: Event ): void
+  {
+    const yOffSet = window.pageYOffset;
+    if ( ( yOffSet || this.document.documentElement.scrollTop || this.document.body.scrollTop ) > this.showScrollHeight )
+    {
+      this.showGoUpButton = true;
+    } else if ( this.showGoUpButton && ( yOffSet || this.document.documentElement.scrollTop || this.document.body.scrollTop ) < this.hideScrollHeight )
+    {
+      this.showGoUpButton = false;
+    }
+  }
 
+  onScrollDown (): void
+  {
+    if ( this.info.next )
+    {
+      this.pageNum++;
+      this.getDataFromService();
+    }
+  }
+
+  onScrollTop (): void
+  {
+    this.document.body.scrollTop = 0; // Safari
+    this.document.documentElement.scrollTop = 0; // Other
+  }
 
   private onUrlChanged (): void
   {
@@ -96,7 +95,6 @@ export class CartasComponent implements OnInit
         this.getCardsByQuery();
       } );
   }
-
 
   private getCardsByQuery (): void
   {

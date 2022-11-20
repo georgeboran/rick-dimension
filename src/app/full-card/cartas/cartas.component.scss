@@ -1,25 +1,5 @@
 @import "../../utilities/_variables";
-.cajaBotonTop {
-  width: 60px;
-  height: 60px;
-  position: sticky;
-  border-radius: 5px;
-  margin-left: auto;
-  margin-right: 2em;
-  margin-top: 20em;
-  bottom: 40px;
-  background-color: $naranja;
-  box-shadow: 0px 4px 4px $morado-claro-letra;
-  transition: all 0.2s ease-in-out;
-  opacity: 0.8;
-  img {
-    height: 90px;
-    width: 60px;
-  }
-  img:hover {
-    transition: all 2.2s ease-in-out;
-  }
-}
+
 .contenedorCartas {
   display: flex;
   flex-wrap: wrap;

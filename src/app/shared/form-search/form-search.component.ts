@@ -1,24 +1,33 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-@Component({
+@Component( {
   selector: 'app-form-search',
   templateUrl: './form-search.component.html',
-  styleUrls: ['./form-search.component.scss'],
-})
-export class FormSearchComponent implements OnInit {
-  constructor(private router: Router) {}
+  styleUrls: [ './form-search.component.scss' ],
+} )
+export class FormSearchComponent implements OnInit
+{
+  constructor ( private router: Router ) { }
 
-  ngOnInit(): void {}
+  ngOnInit (): void { }
 
-  onSearch(value: string) {
-    console.log('buscar: ' + value);
-    if (value && value.length > 3) {
-      this.router
-        .navigateByUrl('/cartas', { skipLocationChange: true })
-        .then(() => {
-          this.router.navigate([``], { queryParams: { q: value } });
-        });
-    }
+  onSearch ( value: string )
+  {
+    if ( value && value.length > 3 )
+    {
+      this.router.navigate( [ `/cartas` ], { queryParams: { q: value } } );
+    } else if ( value.length < 1 )
+    {
+
+      this.router.navigate( [ `/cartas` ], {
+        queryParams: { q: '' }
+      } );
+
+    };
   }
+
+
+
+
 }

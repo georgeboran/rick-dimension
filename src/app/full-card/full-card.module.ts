@@ -1,19 +1,22 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FullComponent } from './full/full.component';
+import { CardDetailsComponent } from './card-details/card-details.component';
 import { CardContainerComponent } from './card-container/card-container.component';
-import { HomeComponent } from './home/home.component';
 import { CartasComponent } from './cartas/cartas.component';
 import { FormSearchComponent } from '../shared/form-search/form-search.component';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { HomeComponent } from './home/home.component';
+
 @NgModule( {
   declarations: [
-    FullComponent,
-    CardContainerComponent,
-    HomeComponent,
+    CardDetailsComponent
+    , CardContainerComponent,
     CartasComponent,
     FormSearchComponent,
+    HomeComponent
   ],
-  imports: [ CommonModule, InfiniteScrollModule ],
+  imports: [
+    CommonModule, InfiniteScrollModule
+  ]
 } )
-export class AppPageModule { }
+export class FullCardModule { }
