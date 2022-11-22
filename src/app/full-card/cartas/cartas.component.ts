@@ -121,9 +121,10 @@ export class CartasComponent implements OnInit
           const { info, results } = res;
           this.cards = [ ...this.cards, ...results ];
           this.info = info;
+          window.scrollTo( 0, 0 )
         } else
         {
-          this.cards = [];
+          console.log( 'hola' );
         }
       } );
   }
