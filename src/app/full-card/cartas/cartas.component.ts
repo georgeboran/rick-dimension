@@ -46,8 +46,12 @@ export class CartasComponent implements OnInit
 
   ngOnInit (): void
   {
-
     this.getCardsByQuery();
+  }
+
+  returnQuery ()
+  {
+    return this.query;
   }
 
   retornarString ( objeto: Object )
@@ -57,7 +61,7 @@ export class CartasComponent implements OnInit
   }
 
   @HostListener( 'window:scroll', [] )
-  onWindowScroll ( event: Event ): void
+  onWindowScroll (): void
   {
     const yOffSet = window.pageYOffset;
     if ( ( yOffSet || this.document.documentElement.scrollTop || this.document.body.scrollTop ) > this.showScrollHeight )

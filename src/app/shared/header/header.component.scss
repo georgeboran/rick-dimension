@@ -1,18 +1,25 @@
 @import "../../utilities/_variables";
 .topBar {
+  padding: 1em;
   justify-content: space-between;
-  padding: 0 3em;
-  height: 80px;
+  height: 60px;
   background-color: $morado-claro;
-
   .pBox {
+    z-index: 10;
     margin-top: 1em;
-    color: $morado-oscuro-letra;
+    padding: 0.2em 0.5em;
+    border-radius: 10px;
+    background-color: $amarillo;
     p {
+      font-size: large;
+      color: $morado-oscuro-letra;
+      padding: 0.2em 0.5em;
+      cursor: pointer;
     }
   }
 }
 img {
   margin-top: -1px;
+  z-index: 0;
   position: absolute;
 }

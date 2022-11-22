@@ -1,5 +1,7 @@
 @import "../../utilities/_variables";
-
+.contenedorVacio {
+  margin-top: 5em;
+}
 .contenedorCartas {
   display: flex;
   flex-wrap: wrap;

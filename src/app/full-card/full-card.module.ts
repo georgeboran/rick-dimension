@@ -5,7 +5,7 @@ import { CardContainerComponent } from './card-container/card-container.componen
 import { CartasComponent } from './cartas/cartas.component';
 import { FormSearchComponent } from '../shared/form-search/form-search.component';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
-import { HomeComponent } from './home/home.component';
+
 
 @NgModule( {
   declarations: [
@@ -13,7 +13,6 @@ import { HomeComponent } from './home/home.component';
     , CardContainerComponent,
     CartasComponent,
     FormSearchComponent,
-    HomeComponent
   ],
   imports: [
     CommonModule, InfiniteScrollModule

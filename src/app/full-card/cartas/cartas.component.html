@@ -10,7 +10,10 @@
         <div class="parteSuperior">
           <h2>{{card.name | slice: 0:15}}</h2>
           <div class="filas flex">
-            <div [ngStyle]="card.status=='Alive'?{'background-color':'green'} : {'background-color': 'red'}"></div>
+            <div style="background-color: green;" *ngIf="card.status == 'Alive'"></div>
+            <div style="background-color: red;" *ngIf="card.status == 'Dead'"></div>
+            <div style="background-color: orange;" *ngIf="card.status == 'unknown'"></div>
+            <ng-template #unknown></ng-template>
             <p>{{card.status}}</p>-
             <p>{{card.species}}</p>
           </div>
@@ -28,5 +31,12 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="contenedorVacio" *ngIf="cards.length <= 0">
+    <div>
+      <h1 class="flex">No Characters Found</h1>
+      <h2 class="flex">With the name of {{returnQuery()}}.</h2>
+    </div>
+
   </div>
 </div>

@@ -2,16 +2,20 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CardContainerComponent } from './full-card/card-container/card-container.component';
 import { CardDetailsComponent } from './full-card/card-details/card-details.component';
-
+import { HomeComponent } from './home/home.component';
 const routes: Routes = [
   {
     path: '',
-    component: CardContainerComponent,
-    pathMatch: 'full',
-  }, {
+    redirectTo: 'home',
+    pathMatch: 'full'
+  },
+  {
+    path: 'home',
+    component: HomeComponent,
+  },
+  {
     path: 'cartas',
-    component: CardContainerComponent,
-    pathMatch: 'full',
+    component: CardContainerComponent
   },
   {
     path: 'details',

@@ -9,8 +9,12 @@ import { Router } from '@angular/router';
 export class AppComponent
 {
   title = 'rick-dimension';
-  constructor ( public router: Router )
+  constructor ( private router: Router )
   {
 
+  }
+  getRoute (): string
+  {
+    return this.router.url;
   }
 }

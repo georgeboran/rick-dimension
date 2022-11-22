@@ -1,6 +1,8 @@
 @import "../../utilities/_variables";
 
 .total {
+  min-height: 100vh;
+  background-color: $morado-claro;
   .sticky {
     position: sticky;
     top: 0px;
@@ -13,10 +15,15 @@
         width: 450px;
         height: max-content;
         img {
-          filter: drop-shadow(10px 10px 0px $blanco);
+          cursor: pointer;
+          filter: drop-shadow(6px 6px 0px $blanco);
           width: 450px;
           padding-top: 5em;
           margin-left: 5em;
+          transition: all 0.5s ease-in-out;
+          &:hover {
+            filter: drop-shadow(10px 10px 0px $blanco);
+          }
         }
       }
       .pBox {
@@ -38,8 +45,8 @@
     width: 100vw;
     height: max-content;
     background-color: $morado-claro;
-    padding-top: 15vh;
-    padding-bottom: 10vh;
+    padding-top: 5em;
+    padding-bottom: 5vh;
   }
 }
 
