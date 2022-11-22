@@ -8,7 +8,7 @@
 
       <div class="boxTexto">
         <div class="parteSuperior">
-          <h2>{{card.name | slice: 0:15}}</h2>
+          <h2>{{card.name.split(' ')[0]  }} {{card.name.split(' ')[1]  }}</h2>
           <div class="filas flex">
             <div style="background-color: green;" *ngIf="card.status == 'Alive'"></div>
             <div style="background-color: red;" *ngIf="card.status == 'Dead'"></div>

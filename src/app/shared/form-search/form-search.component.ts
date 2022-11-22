@@ -19,7 +19,6 @@ export class FormSearchComponent implements OnInit
       this.router.navigate( [ `/cartas` ], { queryParams: { q: value } } );
     } else if ( value.length < 1 )
     {
-
       this.router.navigate( [ `/cartas` ], {
         queryParams: { q: '' }
       } );

@@ -97,6 +97,7 @@ export class CartasComponent implements OnInit
         this.cards = [];
         this.pageNum = 1;
         this.getCardsByQuery();
+        window.scrollTo( 0, 0 )
       } );
   }
 
@@ -121,7 +122,6 @@ export class CartasComponent implements OnInit
           const { info, results } = res;
           this.cards = [ ...this.cards, ...results ];
           this.info = info;
-          window.scrollTo( 0, 0 )
         } else
         {
           this.cards = [];
