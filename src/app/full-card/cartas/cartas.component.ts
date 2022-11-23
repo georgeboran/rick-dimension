@@ -46,7 +46,6 @@ export class CartasComponent implements OnInit
 
   ngOnInit (): void
   {
-    this.getCardsByQuery();
   }
 
   returnQuery ()

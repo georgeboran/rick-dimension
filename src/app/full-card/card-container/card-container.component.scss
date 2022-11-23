@@ -8,10 +8,10 @@
     top: 0px;
     .bottomBar {
       justify-content: space-between;
-      height: 70px;
       background-color: $morado-oscuro;
+      height: 70px;
       .imageBox {
-        z-index: 10;
+        z-index: 1;
         width: 450px;
         height: max-content;
         img {
@@ -20,6 +20,10 @@
           width: 450px;
           padding-top: 5em;
           margin-left: 5em;
+          transition: all 0.5s ease-in-out;
+          -webkit-transition: all 0.5s ease-in-out;
+          -moz-transition: all 0.5s ease-in-out;
+          -o-transition: all 0.5s ease-in-out;
           transition: all 0.5s ease-in-out;
           &:hover {
             filter: drop-shadow(10px 10px 0px $blanco);
@@ -38,15 +42,13 @@
 
   img {
     margin-top: -1px;
-    position: absolute;
   }
 
   .contenedorHolder {
     width: 100vw;
     height: max-content;
     background-color: $morado-claro;
-    padding-top: 5em;
-    padding-bottom: 5vh;
+    margin-top: 1em;
   }
 }
 
@@ -106,7 +108,5 @@
     width: 100vw;
     height: max-content;
     background-color: $morado-claro;
-    padding-top: 2em !important;
-    padding-bottom: 5vh;
   }
 }

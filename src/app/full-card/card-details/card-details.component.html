@@ -1,1 +1,14 @@
-<p>card-details works!</p>
+<div class="contenedorDetalles flex" *ngIf="card$ | async as character">
+  <div class="controladorInterior">
+    <div class="flex">
+      <h2 class="pe">
+        COMING SOON
+      </h2>
+    </div>
+    <div class="flex">
+      <button (click)="onBack()">
+        GO BACK
+      </button>
+    </div>
+  </div>
+</div>

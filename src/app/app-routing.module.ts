@@ -18,7 +18,7 @@ const routes: Routes = [
     component: CardContainerComponent
   },
   {
-    path: 'details',
+    path: 'details/:id',
     component: CardDetailsComponent
   }
 ];

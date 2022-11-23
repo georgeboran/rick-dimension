@@ -1,0 +1,23 @@
+@import "../../utilities/_variables";
+.contenedorDetalles {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  background-color: $morado-claro;
+  .controladorInterior {
+    .pe {
+      margin-bottom: 1em;
+    }
+    button {
+      padding: 1em;
+      border: 0;
+      border-radius: 10px;
+      background-color: $morado-oscuro;
+      color: $blanco;
+      box-shadow: 1px 1px 1px $morado-oscuro;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}

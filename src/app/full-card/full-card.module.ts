@@ -5,7 +5,7 @@ import { CardContainerComponent } from './card-container/card-container.componen
 import { CartasComponent } from './cartas/cartas.component';
 import { FormSearchComponent } from '../shared/form-search/form-search.component';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
-
+import { RouterModule } from '@angular/router';
 
 @NgModule( {
   declarations: [
@@ -15,7 +15,7 @@ import { InfiniteScrollModule } from 'ngx-infinite-scroll';
     FormSearchComponent,
   ],
   imports: [
-    CommonModule, InfiniteScrollModule
+    CommonModule, InfiniteScrollModule, RouterModule
   ]
 } )
 export class FullCardModule { }

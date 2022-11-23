@@ -7,8 +7,10 @@
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 2.4em;
+  padding-bottom: 2.4em;
 
   .carta {
+    cursor: pointer;
     margin-left: auto;
     margin-right: auto;
     border-radius: 10px;
@@ -19,14 +21,23 @@
     max-height: max-content;
     background-color: $blanco;
 
+    &:hover .boxTexto {
+      background-color: $morado-claro-letra;
+      color: $blanco;
+    }
     .boxImage {
-      img {
+      .fotoPersonaje {
+        transition: all 0.2s ease-in-out;
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
         border-radius: 10px 0 0 10px;
         width: 230px;
         height: 230px;
       }
     }
     .boxTexto {
+      width: 100%;
       padding: 0.8em 0 0 1em;
       .parteSuperior {
         .filas {
@@ -60,15 +71,12 @@
 }
 @media only screen and (max-width: 600px) {
   .contenedorCartas {
-    padding: 0;
     .carta {
       width: 350px;
       height: max-content;
 
       .boxImage {
-        img {
-          margin-bottom: auto;
-          border-radius: 10px 0 0 0;
+        .fotoPersonaje {
           width: 150px;
           height: 150px;
         }
