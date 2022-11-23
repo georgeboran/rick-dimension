@@ -1,0 +1,19 @@
+@import "../../utilities/_variables";
+.footerBar {
+  justify-content: space-between;
+  height: 80px;
+  background-color: $morado-claro;
+  width: 100%;
+  position: absolute;
+  .pBox {
+    padding: 0.2em 0.5em;
+    border-radius: 10px;
+    background-color: $amarillo;
+    p {
+      font-size: large;
+      color: $morado-oscuro-letra;
+      padding: 0.2em 0.5em;
+      cursor: pointer;
+    }
+  }
+}

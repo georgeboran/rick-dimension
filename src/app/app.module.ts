@@ -5,10 +5,11 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HeaderComponent } from './shared/header/header.component';
 import { FullCardModule } from './full-card/full-card.module';
+import { FooterComponent } from './shared/footer/footer.component';
 @NgModule( {
-  declarations: [ AppComponent, HeaderComponent ],
+  declarations: [ AppComponent, HeaderComponent, FooterComponent ],
   imports: [ BrowserModule, AppRoutingModule, HttpClientModule, FullCardModule ],
   providers: [],
-  bootstrap: [ AppComponent ],
+  bootstrap: [ AppComponent, ],
 } )
 export class AppModule { }

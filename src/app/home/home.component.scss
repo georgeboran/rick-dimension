@@ -6,8 +6,8 @@
   background-color: $morado-oscuro;
 
   .contenedorRotable {
-    justify-content: space-around;
     height: 100%;
+    justify-content: space-around;
     .contenedorTexto {
       margin-left: auto;
       margin-right: auto;
@@ -60,7 +60,6 @@
 
 @media only screen and (max-width: 1024px) {
   .contenedorRotable {
-    height: 90% !important;
     .contenedorFoto {
       .contenedorAttribution {
         img {
@@ -73,9 +72,6 @@
 }
 
 @media only screen and (max-width: 992px) {
-  .contenedorRotable {
-    height: 80% !important;
-  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */

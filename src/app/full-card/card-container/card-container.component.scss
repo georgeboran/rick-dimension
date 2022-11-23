@@ -101,4 +101,12 @@
       }
     }
   }
+
+  .contenedorHolder {
+    width: 100vw;
+    height: max-content;
+    background-color: $morado-claro;
+    padding-top: 2em !important;
+    padding-bottom: 5vh;
+  }
 }

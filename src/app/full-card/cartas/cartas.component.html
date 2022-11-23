@@ -13,7 +13,6 @@
             <div style="background-color: green;" *ngIf="card.status == 'Alive'"></div>
             <div style="background-color: red;" *ngIf="card.status == 'Dead'"></div>
             <div style="background-color: orange;" *ngIf="card.status == 'unknown'"></div>
-            <ng-template #unknown></ng-template>
             <p>{{card.status}}</p>-
             <p>{{card.species}}</p>
           </div>
