@@ -11,11 +11,11 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    component: HomeComponent,
+    component: HomeComponent
   },
   {
     path: 'cartas',
-    component: CardContainerComponent
+    component: CardContainerComponent,
   },
   {
     path: 'details/:id',
@@ -24,7 +24,13 @@ const routes: Routes = [
 ];
 
 @NgModule( {
-  imports: [ RouterModule.forRoot( routes ) ],
+  imports: [ RouterModule.forRoot( routes, {
+    // Restore the last scroll position
+    scrollPositionRestoration: "enabled",
+    scrollOffset: [ 0, 0 ],
+    // Enable scrolling to anchors
+    anchorScrolling: "enabled",
+  } ) ],
   exports: [ RouterModule ],
 } )
 export class AppRoutingModule { }

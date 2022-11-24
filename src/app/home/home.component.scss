@@ -4,7 +4,6 @@
   max-width: 100vw;
   height: 100vh;
   background-color: $morado-oscuro;
-
   .contenedorRotable {
     height: 100%;
     justify-content: space-around;
@@ -44,20 +43,10 @@
           }
         }
         img {
-          animation: brilloPortal 6s steps(80, end) 2;
-          filter: drop-shadow(10px 10px 3px $morado-claro) drop-shadow(-15px -15px 0px $negro-titulo);
+          animation: brilloPortal 6s steps(100) infinite;
           width: 500px;
           height: 450px;
-          transition: all 0.5s ease-in-out;
-          transition: all 0.5s ease-in-out;
-          -webkit-transition: all 0.5s ease-in-out;
-          -moz-transition: all 0.5s ease-in-out;
-          -o-transition: all 0.5s ease-in-out;
-          transition: all 0.5s ease-in-out;
           cursor: pointer;
-          &:hover {
-            filter: drop-shadow(15px 15px 8px $morado-claro) drop-shadow(-25px -25px 0px $negro-titulo);
-          }
         }
       }
     }
@@ -136,18 +125,18 @@
 }
 @keyframes brilloPortal {
   0% {
-    filter: drop-shadow(10px 10px 3px $morado-claro) drop-shadow(-15px -15px 0px $negro-titulo);
+    filter: drop-shadow(0px 0px 3px $amarillo) drop-shadow(0px 0px 20px $morado-oscuro-letra);
   }
   25% {
-    filter: drop-shadow(0 0 0 $morado-claro) drop-shadow(0 0 0 $negro-titulo);
+    filter: drop-shadow(1px 1px 3px $morado-claro) drop-shadow(-4px 2px 4px $naranja);
   }
   50% {
-    filter: drop-shadow(10px 10px 3px $morado-claro) drop-shadow(-15px -15px 0px $negro-titulo);
+    filter: drop-shadow(0px 1px 3px $amarillo) drop-shadow(-0px 4px 20px $morado-oscuro-letra);
   }
   75% {
-    filter: drop-shadow(0 0 0 $morado-claro) drop-shadow(0 0 0 $negro-titulo);
+    filter: drop-shadow(-1px -1px 3px $morado-claro) drop-shadow(4px 2px 4px $naranja);
   }
   100% {
-    filter: drop-shadow(10px 10px 3px $morado-claro) drop-shadow(-15px -15px 0px $negro-titulo);
+    filter: drop-shadow(0px 0px 3px $amarillo) drop-shadow(0px 0px 20px $morado-oscuro-letra);
   }
 }

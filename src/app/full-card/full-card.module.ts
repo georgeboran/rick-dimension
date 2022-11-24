@@ -9,8 +9,8 @@ import { RouterModule } from '@angular/router';
 
 @NgModule( {
   declarations: [
-    CardDetailsComponent
-    , CardContainerComponent,
+    CardDetailsComponent,
+    CardContainerComponent,
     CartasComponent,
     FormSearchComponent,
   ],
