@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <div class="contenedorHolder " infinite-scroll (scrolled)="onScrollDown()">
   <div class="contenedorCartas">
-    <div class="carta" *ngFor="let card of cards" [routerLink]="['/details/', card.id]">
+    <!--[routerLink]="['/details/', card.id]"-->
+    <div class="carta" *ngFor="let card of cards">
       <div class="boxImage flex">
-        <img class="fotoPersonaje" [src]="card.image" [alt]="card.image">
+        <img class="fotoPersonaje" [src]="card.image" [alt]="card.name">
       </div>
       <div class="boxTexto">
         <div class="parteSuperior">
